@@ -4,20 +4,26 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien1" class="com.noir.Alien">
+    <bean id="alien1" class="com.noir.Alien" autowire="byType"> <!--Autowire - byName - it will use the property name and search for bean id with that name. -->
 <!--        <constructor-arg type="com.noir.Laptop" ref="laptop"/>-->
 <!--        <constructor-arg type="int" value="21"/>-->
 <!--        <property name="lap" ref="laptop"/>-->
 
-        <constructor-arg index="1" ref="laptop"/>
-        <constructor-arg index="0" value="21"/>
+<!--        <constructor-arg index="1" ref="laptop"/>-->
+<!--        <constructor-arg index="0" value="21"/>-->
 
 <!--        <constructor-arg name="age" value="21"/>-->
 <!--        <constructor-arg name="lap" ref="laptop"/>-->
 
+        <property name="age" value ="21"/>
+<!--        <property name="com" ref="com"/>--> <!--autowired-->
+
     </bean>
 
-    <bean id ="laptop" class="com.noir.Laptop">
+    <bean id ="com1" class="com.noir.Laptop">
+    </bean>
+
+    <bean id ="com2" class="com.noir.Desktop">
     </bean>
 
 </beans>
