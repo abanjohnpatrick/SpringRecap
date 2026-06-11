@@ -16,15 +16,18 @@
 <!--        <constructor-arg name="lap" ref="laptop"/>-->
 
         <property name="age" value ="21"/>
-<!--        <property name="com" ref="com"/>--> <!--autowired-->
+        <property name="com">
+            <bean id ="com" class="com.noir.Laptop" primary="true">
+            </bean>
+        </property>
 
     </bean>
 
-    <bean id ="com1" class="com.noir.Laptop">
-    </bean>
+<!--    <bean id ="com" class="com.noir.Laptop" primary="true">-->
+<!--    </bean>-->
 
-    <bean id ="com2" class="com.noir.Desktop">
-    </bean>
+<!--    <bean id ="com2" class="com.noir.Desktop" lazy-init="true">-->
+<!--    </bean>-->
 
 </beans>
 
