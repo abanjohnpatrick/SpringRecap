@@ -4,7 +4,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="com.noir.Alien">
+    <bean id="alien1" class="com.noir.Alien">
+    </bean>
+
+    <bean id="alien2" class="com.noir.Alien">
+    </bean>
+
+    <bean id ="laptop" class="com.noir.Laptop">
+
     </bean>
 
 </beans>
