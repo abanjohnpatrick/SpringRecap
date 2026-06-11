@@ -5,13 +5,19 @@
 
     <!-- bean definitions here -->
     <bean id="alien1" class="com.noir.Alien">
-    </bean>
+<!--        <constructor-arg type="com.noir.Laptop" ref="laptop"/>-->
+<!--        <constructor-arg type="int" value="21"/>-->
+<!--        <property name="lap" ref="laptop"/>-->
 
-    <bean id="alien2" class="com.noir.Alien">
+        <constructor-arg index="1" ref="laptop"/>
+        <constructor-arg index="0" value="21"/>
+
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="lap" ref="laptop"/>-->
+
     </bean>
 
     <bean id ="laptop" class="com.noir.Laptop">
-
     </bean>
 
 </beans>
