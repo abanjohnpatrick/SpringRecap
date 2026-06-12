@@ -1,10 +1,17 @@
 package com.noir;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+@Component
 public class Alien {
 
+    @Value("21")
     private int age;
+
+    //@Qualifier("laptop")
     private Computer com;
 
     public Alien(){
@@ -28,6 +35,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("laptop")
     public void setCom(Computer com) {
         this.com = com;
     }
