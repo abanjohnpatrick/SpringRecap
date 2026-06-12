@@ -1,5 +1,7 @@
 package com.noir;
 
+import org.springframework.stereotype.Component;
+
 public class Alien {
 
     private int age;
